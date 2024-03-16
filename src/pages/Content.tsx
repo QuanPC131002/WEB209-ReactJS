@@ -13,7 +13,7 @@ const Content = () => {
               <div className="content-news--item" key={index}>
               <img src={item.thumbnail} alt="" />
               <h3>{item.title}</h3>
-              <p>{item.price}</p>
+              <p>{item.price}$</p>
               <span>{item.description}</span>
             </div>
            ))}

@@ -1,0 +1,104 @@
+/* Admin */
+.container{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 10px;
+}
+.nav{
+  background-color: #000000ad;
+  height: 100%;
+}
+.nav ul li {
+    line-height: 40px;
+    list-style-type: none;
+    margin: 20px 0;
+}
+.nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+.nav ul li a:hover {
+    color: yellow;
+}
+.content-admin {
+  padding: 0;
+}
+.content-title{
+  padding: 16px;
+  background-color: #000000ad;
+  color: white;
+}
+table {
+  width: 100%;
+}
+table thead tr th{
+  padding: 10px;
+  border: 1px solid gray;
+  background-color: rgb(128, 128, 128);
+  text-align: center;
+  color: white;
+}
+table tbody tr td{
+  padding: 10px;
+  border: 1px solid gray;
+  text-align: center;
+}
+button.btn-delete{
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 6px;
+  border-radius: 4px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+button.btn-edit{
+  background-color: yellow;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+}
+.btn-delete:hover ,.btn-edit:hover {
+  opacity: 0.8;
+}
+button.btn-edit a {
+  text-decoration: none;
+}
+
+/* Form */
+.myForm {
+  
+}
+.myForm-item{
+  margin: 10px;
+}
+.myForm-item span {
+  color: red;
+  font-weight: 800;
+}
+.myForm-item label {
+  display: block;
+  font-weight: 800;
+  font-size: 18px;
+}
+.myForm-item input {
+  width: 100%;
+  height: 40px;
+}
+button.btn-add{
+  background-color: white;
+  margin: 10px 0;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 4px;
+  
+}
+button.btn-add a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+}
+button.btn-add a:hover {
+  opacity: 0.6;
+}

@@ -1,20 +1,27 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem; */
   /* text-align: center; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .header .menu > nav{
-  padding: 10px;
-  background-color: cadetblue;
+  padding:4px;
+  background-color: #000000ad;
+
+}
+.header .menu > nav > ul {
+  padding: 0 100px;
 }
 .header .menu > nav ul li {
   display: inline-block;
   margin: 0 20px;
 }
 .header .menu > nav ul li a {
-  font-size: 24px;
+  font-size: 20px;
   text-decoration: none;
   color: white;
 }
@@ -31,7 +38,10 @@
 /* Content */
 h1{
   text-align: center;
-  color: rgba(0, 0, 255, 0.366);
+  color: rgba(0, 0, 255, 0.682);
+}
+.content {
+  padding:0 100px;
 }
 .content-news {
   display: grid;
@@ -41,6 +51,7 @@ h1{
 .content-news--item{
   padding: 6px;
   box-shadow: 0 1px 1px gray;
+  text-align: center;
 }
 .content-news--item img{
   width: 100%;
@@ -60,45 +71,38 @@ h1{
   text-align: center;
 }
 /* Footer */
-.footer h4{
-  color: brown;
-  background-color: cadetblue;
-  padding: 10px;
+.border {
+  border: 1px solid #000;
+  margin-top: 40px;
 }
-
-
-/* Admin */
-.admin-content{
-
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 20px 0;
+  background-color: #000000ad;
+  padding: 0 100px;
 }
-table {
-  width: 100%;
-}
-table thead tr th{
-  padding: 10px;
-  border: 1px solid gray;
-  background-color: coral;
+.footer-item {
   text-align: center;
 }
-table tbody tr td{
-  padding: 10px;
-  border: 1px solid gray;
-  text-align: center;
-}
-button.btn-delete{
-  background-color: brown;
-  border: none;
+.footer-item h2 {
   color: white;
-  padding: 4px;
-  border-radius: 4px;
+  font-size: 18px;
 }
-button.btn-edit{
-  background-color: yellow;
-  border: none;
-  padding: 4px;
-  border-radius: 4px;
+.footer-item p {
+  display: block;
+  color: white;
 }
-button.btn-edit a {
-  text-decoration: none;
+.footer-item .icon {
+  font-size: 30px;
+  margin: 10px;
+  color: white;
 }
+.footer-item .icon:hover {
+  opacity: 0.7;;
+  cursor: pointer;
+}
+
+
+
 

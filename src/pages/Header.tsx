@@ -8,9 +8,9 @@ const Header = () => {
        <div className="menu">
         <nav>
                 <ul>
-                    <li><Link to='/home'>Home</Link></li>
-                    <li><Link to='/about'>About</Link></li>
-                    <li><Link to='/admin'>Admin</Link></li>
+                    <li><Link to='/home'>Trang chủ</Link></li>
+                    <li><Link to='/about'>Giới thiệu</Link></li>
+                    <li><Link to='/admin'>Quản trị</Link></li>
                 </ul>
             </nav>
        </div>
