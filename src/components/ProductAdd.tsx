@@ -3,6 +3,7 @@ import { IProduct } from '../interfaces/Product'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { ProductContext } from '../contexts/ProductContext'
+import axios from 'axios'
 
 
 
@@ -12,7 +13,7 @@ type FormValue = {
   price: number
 }
 const ProductAdd = () => {
-  const {onHandleAdd} = useContext(ProductContext)
+  const [, dispatch] = useContext(ProductContext)
   const {
     register,
     handleSubmit,
@@ -21,8 +22,14 @@ const ProductAdd = () => {
 
   const navigate = useNavigate();
 
-  const onSubmit: SubmitHandler<FormValue> = (data) => {
-    onHandleAdd(data);
+  const onSubmit: SubmitHandler<FormValue> = async (product) => {
+    try {
+      const { data } = await axios.post(' http://localhost:3000/products', product)
+      dispatch({type: 'ADD_PRODUCT', payload: data as IProduct});
+    } catch (error) {
+      console.log(error);
+      
+    }
     navigate('/products')
   }
   return (

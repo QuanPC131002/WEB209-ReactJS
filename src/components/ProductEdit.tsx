@@ -12,7 +12,7 @@ type FormValue = {
   price: number
 }
 const ProductAdd = () => {
-  const {onHandleEdit} = useContext(ProductContext)
+  const [, dispatch] = useContext(ProductContext)
   const {id} = useParams();
   const {
     register,
@@ -29,8 +29,13 @@ const ProductAdd = () => {
   }, [id])
   const navigate = useNavigate();
 
-  const onSubmit: SubmitHandler<FormValue> = (data) => {
-    onHandleEdit(data);
+  const onSubmit: SubmitHandler<FormValue> = async (product) => {
+    try {
+      const { data } = await axios.put(`http://localhost:3000/products/${id}`, product)
+      dispatch({type: 'UPDATE_PRODUCT', payload: data as IProduct})
+    } catch (error) {
+      
+    }
     navigate('/products')
   }
 

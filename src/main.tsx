@@ -10,9 +10,11 @@ import ProductContextProvider from './contexts/ProductContext.tsx'
 ReactDOM.createRoot(document.getElementById('root')!).render(
  <React.StrictMode>
   <ProductContextProvider>
+    <CounterContextProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
+    </CounterContextProvider>
   </ProductContextProvider>
  </React.StrictMode>
 )
