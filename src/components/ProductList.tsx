@@ -30,29 +30,29 @@ const ProductList = () => {
                 </nav>
             </div>
             <div>
-                <button className='p-2 bg-blue-500 text-white rounded my-4 hover:opacity-80'><Link to='/products/add'>Thêm bài viết</Link></button>
-            <table>
+                <button className='p-2 bg-blue-500 text-white rounded my-4 hover:opacity-80'><Link to='/products/add'>Thêm mới</Link></button>
+            <table className='w-full'>
                 <thead>
                     <tr>
-                        <th className='p-2 border-[1px] border-solid border-[#ccc]'>ID</th>
-                        <th className='p-2 border-[1px] border-solid border-[#ccc]'>Title</th>
-                        <th className='p-2 border-[1px] border-solid border-[#ccc]'>Desc</th>
                         <th className='p-2 border-[1px] border-solid border-[#ccc]'>Image</th>
-                        <th className='p-2 border-[1px] border-solid border-[#ccc]'>Date</th>
+                        <th className='p-2 border-[1px] border-solid border-[#ccc]'>Name</th>
+                        <th className='p-2 border-[1px] border-solid border-[#ccc]'>Desc</th>
+                        <th className='p-2 border-[1px] border-solid border-[#ccc]'>Price</th>
+                        <th className='p-2 border-[1px] border-solid border-[#ccc]'>Discount</th>
                         <th className='p-2 border-[1px] border-solid border-[#ccc]'>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     {products && products.slice(0).reverse().map((item: IProduct, index:number) => (
                         <tr key={index}>
-                            <td className='p-2 border-[1px] border-solid border-[#ccc] text-center'>{item.id}</td>
-                            <td className='p-2 border-[1px] border-solid border-[#ccc] text-center'>{item.title}</td>
-                            <td className='p-2 border-[1px] border-solid border-[#ccc] text-center'>{item.description}</td>
                             <td className='p-2 border-[1px] border-solid border-[#ccc] text-center w-[200px]'><img src={item.image} alt="" className='rounded-[100%]'/></td>
-                            <td className='p-2 border-[1px] border-solid border-[#ccc] text-center'>{item.date}</td>
+                            <td className='p-2 border-[1px] border-solid border-[#ccc] text-center'>{item.name}</td>
+                            <td className='p-2 border-[1px] border-solid border-[#ccc] text-center'>{item.description}</td>
+                            <td className='p-2 border-[1px] border-solid border-[#ccc] text-center'>{item.price}</td>
+                            <td className='p-2 border-[1px] border-solid border-[#ccc] text-center'>{item.discount}%</td>
                             <td className='p-2 border-[1px] border-solid border-[#ccc] text-center'>
-                                <button className='p-2 bg-red-500 text-white rounded hover:opacity-70' onClick={() => onHandleRemove(item.id)}>Remove</button>
-                                <button className='p-2 bg-yellow-500 text-white rounded hover:opacity-70'><Link to={`/products/edit/${item.id}`}>Edit</Link></button>
+                                <button className='w-[80px] mb-1 h-[40px] border-[1px] border-solid border-[red] bg-white text-[red] rounded hover:opacity-70' onClick={() => onHandleRemove(item.id)}>Xóa</button>
+                                <button className='w-[80px] h-[40px] bg-yellow-500 text-white rounded hover:opacity-70'><Link to={`/products/edit/${item.id}`}>Sửa</Link></button>
                             </td>
                         </tr>
                     ))}

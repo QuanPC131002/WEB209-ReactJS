@@ -2,45 +2,93 @@
   "products": [
     {
       "id": 1,
-      "title": "long established13",
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....",
-      "image": "/src/assets/img/image 2.jpg",
-      "date": "May 20, 2020"
+      "name": "Ghế Sofa màu xám",
+      "price": 100000,
+      "image": "https://picsum.photos/id/10/300/300",
+      "description": "Ghế Sofa màu xám sang trọng và thoải mái, phù hợp cho không gian phòng khách hiện đại.",
+      "discount": 30,
+      "quantity": 100,
+      "featured": true
     },
     {
       "id": 2,
-      "title": "long established2",
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....",
-      "image": "/src/assets/img/image 4.jpg",
-      "date": "May 20, 2020"
+      "name": "Bàn ăn tròn mặt gỗ",
+      "price": 19.99,
+      "image": "https://picsum.photos/id/11/300/300",
+      "description": "Bàn ăn tròn với mặt bàn làm từ gỗ tự nhiên, tạo điểm nhấn ấn tượng cho không gian ăn của bạn.",
+      "discount": 0.1,
+      "quantity": 50,
+      "featured": false
     },
     {
       "id": 3,
-      "title": "long established3",
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....",
-      "image": "/src/assets/img/image 5.jpg",
-      "date": "May 20, 2020"
+      "name": "Kệ sách treo tường",
+      "price": 5.99,
+      "image": "https://picsum.photos/id/12/300/300",
+      "description": "Kệ sách treo tường với thiết kế đơn giản nhưng hiện đại, giúp tối ưu hóa không gian lưu trữ.",
+      "discount": 0,
+      "quantity": 200,
+      "featured": true
     },
     {
-      "title": "Bài viết số 4",
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....",
-      "image": "/src/assets/img/image 5.jpg",
-      "date": "March 13, 2024",
-      "id": 6
+      "id": 4,
+      "name": "Bàn làm việc góc L",
+      "price": 14.99,
+      "image": "https://picsum.photos/id/13/300/300",
+      "description": "Bàn làm việc góc L với kiểu dáng hiện đại, giúp bạn tận dụng tối đa không gian làm việc của mình.",
+      "discount": 0.2,
+      "quantity": 75,
+      "featured": true
     },
     {
-      "title": "Bài viêt số 6",
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....",
-      "image": "https://picsum.photos/seed/picsum/200/120",
-      "date": "March 13, 2024",
-      "id": 8
+      "id": 5,
+      "name": "Tủ giày dép treo tường",
+      "price": "100000",
+      "image": "https://picsum.photos/id/14/300/300",
+      "description": "Tủ giày dép treo tường với kiểu dáng nhỏ gọn, phù hợp cho không gian sàn nhà hẹp.",
+      "discount": 0,
+      "quantity": 150,
+      "featured": false
     },
     {
-      "title": "một hai",
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....",
-      "image": "/src/assets/img/image 4.jpg",
-      "date": "March 13, 2024",
-      "id": 11
+      "id": 6,
+      "name": "Đèn trang trí",
+      "price": 7.99,
+      "image": "https://picsum.photos/id/15/300/300",
+      "description": "Đèn trang trí bàn làm việc với kiểu dáng hiện đại, tạo điểm nhấn cho không gian làm việc của bạn.",
+      "discount": 0.15,
+      "quantity": 100,
+      "featured": false
+    },
+    {
+      "id": 7,
+      "name": "Bộ bàn ghế phòng ăn",
+      "price": "120000",
+      "image": "https://picsum.photos/id/16/300/300",
+      "description": "Bộ bàn ghế phòng ăn với kiểu dáng đẹp mắt, tạo không gian ấm cúng cho bữa ăn gia đình.",
+      "discount": "20",
+      "quantity": 50,
+      "featured": true
+    },
+    {
+      "id": 8,
+      "name": "Tủ TV đứng gỗ sồi",
+      "price": "70000",
+      "image": "https://picsum.photos/id/17/300/300",
+      "description": "Tủ TV đứng được làm từ gỗ sồi tự nhiên, tạo điểm nhấn cho không gian phòng khách của bạn.",
+      "discount": "10",
+      "quantity": 80,
+      "featured": true
+    },
+    {
+      "id": 9,
+      "name": "Giường ngủ đôi",
+      "price": "300000",
+      "image": "https://picsum.photos/id/18/300/300",
+      "description": "Giường ngủ đôi với kiểu dáng đẹp mắt, tạo không gian thoải mái cho giấc ngủ của bạn.",
+      "discount": "10",
+      "quantity": 120,
+      "featured": false
     }
   ]
 }

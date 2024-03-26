@@ -1,16 +1,13 @@
-import './App.css'
-import Header from './components/Header'
-import Home from './components/Home'
-import Footer from './components/Footer'
-import { useEffect, useState } from 'react'
-import { IProduct } from './interfaces/Product'
+// import './App.css'
 import axios from 'axios'
 import { Route, Routes } from 'react-router-dom'
+
+import '../style.scss'
+import LayoutWebsite from './components/LayoutWebsite'
+import HomePage from './pages/HomePage'
 import ProductList from './components/ProductList'
 import ProductAdd from './components/ProductAdd'
 import ProductEdit from './components/ProductEdit'
-import Count from './components/Count'
-
 function App() {
   
   
@@ -18,10 +15,12 @@ function App() {
     <>
     
       <Routes>
-        <Route path='/'  element={<Home />}/>
-        <Route path='/products' element={<ProductList /> } />
-        <Route path='/products/add' element={<ProductAdd /> } />
-        <Route path='/products/edit/:id' element={<ProductEdit /> } />
+        <Route path='/' element={<LayoutWebsite />} >
+          <Route path='/' element={<HomePage />} />
+        </Route>
+        <Route path='products' element={<ProductList />}/>
+        <Route path='products/add' element={<ProductAdd />}/>
+        <Route path='products/edit/:id' element={<ProductEdit />}/>
       </Routes>
 
     </>

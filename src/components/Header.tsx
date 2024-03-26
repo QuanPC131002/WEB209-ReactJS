@@ -1,23 +1,66 @@
-import { Link } from "react-router-dom"
-import banner from "../assets/img/Head-section.jpg"
+import { Link, NavLink } from "react-router-dom"
+import { CartIcon, Logo, SearchIcon, UserIcon, WishlistIcon } from "."
 function Header(){
     return (
         <div>
-            <div className="header">
-               <div className="nav">
-                <div className="nav-text"> <p>HotCoffee</p></div>
-                    <div className="nav-menu">
-                        <ul>
-                            <li><Link to='/hom'>Home</Link></li>
-                            <li><Link to='/products'>Articles</Link></li>
-                        </ul>
+             <header className="header">
+            <div className="container">
+                <div className="header-inner">
+                    <Link to="/" className="header__logo">
+                        <img src={Logo} alt="#" />
+                    </Link>
+                    <div className="button-mobile">
+                        <button>=</button>
                     </div>
-               </div>
-                
-                <div className="banner">
-                    <img src={banner} alt="" />
+                    <nav className="main-menu">
+                        <ul className="main-menu__list">
+                            <li className="main-menu__item">
+                                <NavLink to="/" className="main-menu__link">
+                                    Home
+                                </NavLink>
+                            </li>
+                            <li className="main-menu__item">
+                                <NavLink to="/products" className="main-menu__link">
+                                    Shop
+                                </NavLink>
+                            </li>
+                            <li className="main-menu__item">
+                                <NavLink to="/about" className="main-menu__link">
+                                    About
+                                </NavLink>
+                            </li>
+                            <li className="main-menu__item">
+                                <NavLink to="/contact" className="main-menu__link">
+                                    Contact
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div className="header-items">
+                        <div className="header-item-user">
+                            <span>
+                                <img src={UserIcon} />
+                            </span>
+                        </div>
+                        <div className="header-item-user">
+                            <span>
+                                <img src={SearchIcon} />
+                            </span>
+                        </div>
+                        <div className="header-item-user">
+                            <span>
+                                <img src={WishlistIcon} />
+                            </span>
+                        </div>
+                        <div className="header-item-user">
+                            <span>
+                                <img src={CartIcon} />
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </header>
         </div>
     )
 }
