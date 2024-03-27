@@ -1,9 +1,15 @@
-import React, { useContext } from 'react'
-import { ProductContext } from '../contexts/ProductContext'
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 import { IProduct } from '../interfaces/Product';
 
 const News = () => {
-    const {products} = useContext(ProductContext);
+    const { data } = useQuery({
+      queryKey: ['PRODUCT_KEY'],
+      queryFn: async () => {
+          const { data } = await axios.get('http://localhost:3000/products')
+          return data;
+      }
+    })
   return (
     <div>
        <section className="news">
@@ -13,8 +19,7 @@ const News = () => {
                 </div>
                 <div className="section-body">
                     <div className="product-list">
-                    {products.map((item: IProduct) => (
-                    
+                    {data && data.map((item: IProduct) => (
                         <div className="product-item">
                             <div className="product-image">
                                 <img

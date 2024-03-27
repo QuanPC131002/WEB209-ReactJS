@@ -41,16 +41,6 @@
       "featured": true
     },
     {
-      "id": 5,
-      "name": "Tủ giày dép treo tường",
-      "price": "100000",
-      "image": "https://picsum.photos/id/14/300/300",
-      "description": "Tủ giày dép treo tường với kiểu dáng nhỏ gọn, phù hợp cho không gian sàn nhà hẹp.",
-      "discount": 0,
-      "quantity": 150,
-      "featured": false
-    },
-    {
       "id": 6,
       "name": "Đèn trang trí",
       "price": 7.99,
@@ -89,6 +79,14 @@
       "discount": "10",
       "quantity": 120,
       "featured": false
+    },
+    {
+      "name": "truongtuandat92",
+      "price": 100,
+      "image": "/src/assets/img/image 4.jpg",
+      "discount": 10,
+      "description": "không có",
+      "id": 15
     }
   ]
 }

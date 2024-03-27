@@ -20,7 +20,7 @@ function Header(){
                                 </NavLink>
                             </li>
                             <li className="main-menu__item">
-                                <NavLink to="/products" className="main-menu__link">
+                                <NavLink to="/shop" className="main-menu__link">
                                     Shop
                                 </NavLink>
                             </li>
@@ -30,8 +30,8 @@ function Header(){
                                 </NavLink>
                             </li>
                             <li className="main-menu__item">
-                                <NavLink to="/contact" className="main-menu__link">
-                                    Contact
+                                <NavLink to="/admin" className="main-menu__link">
+                                    Admin
                                 </NavLink>
                             </li>
                         </ul>
