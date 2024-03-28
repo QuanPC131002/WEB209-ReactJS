@@ -228,7 +228,9 @@ img {
   font-size: 20px;
   font-weight: 600;
 }
-
+.product-price__old{
+  text-decoration: line-through;
+}
 .product-item:hover .product-actions {
   opacity: 1;
 }

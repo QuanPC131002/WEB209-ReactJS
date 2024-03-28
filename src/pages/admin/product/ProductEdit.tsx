@@ -1,11 +1,9 @@
-import { joiResolver } from '@hookform/resolvers/joi'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import axios from 'axios'
-import Joi from 'joi'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { useNavigate, useParams } from 'react-router-dom'
-import { IProduct } from '../../interfaces/Product'
-import LayoutAdmin from '../../components/LayoutAdmin'
+import { IProduct } from '../../../interfaces/Product'
+import LayoutAdmin from '../../../components/LayoutAdmin'
 
 
 
@@ -72,17 +70,17 @@ const ProductEdit = () => {
         </div>
         <div className="my-4">
           <label htmlFor="" className='block text-[blue]'>Price</label>
-          <input className='w-[95%] pl-2 h-[50px] border-[1px] border-solid border-[#ccc]' type="number" {...register('price', {required: true})} />
+          <input className='w-[95%] pl-2 h-[50px] border-[1px] border-solid border-[#ccc]' type="number" {...register('price', {required: true, min: 0})} />
           {errors?.price && <p className='text-[red]'>Giá trống !</p>}
         </div>
         <div className="my-4">
           <label htmlFor="" className='block text-[blue]'>Discount</label>
-          <input className='w-[95%] pl-2 h-[50px] border-[1px] border-solid border-[#ccc]' type="number" {...register('discount', {required: true})} />
+          <input className='w-[95%] pl-2 h-[50px] border-[1px] border-solid border-[#ccc]' type="number" {...register('discount', {required: true, min: 0})} />
           {errors?.discount && <p className='text-[red]'>Discount trống !</p>}
         </div>
         <div className="my-4">
           <label htmlFor="" className='block text-[blue]'>Desc</label>
-          <input className='w-[95%] pl-2 h-[50px] border-[1px] border-solid border-[#ccc]' type="text" {...register('description', {required: true})} />
+          <textarea className='w-[95%] pl-2  border-[1px] border-solid border-[#ccc]' rows={10} {...register('description', {required: true})} />
           {errors?.description && <p className='text-[red]'>Mô tả trống !</p>}
         </div>
           <button className='p-2 bg-blue-500 text-white rounded my-4 hover:opacity-80'>{isPending ? "Đang cập nhật" : "Cập nhật"}</button>

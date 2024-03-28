@@ -1,23 +1,10 @@
-import { joiResolver } from '@hookform/resolvers/joi'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import axios from 'axios'
-import Joi from 'joi'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
-import { IProduct } from '../../interfaces/Product'
-import LayoutAdmin from '../../components/LayoutAdmin'
+import LayoutAdmin from '../../../components/LayoutAdmin'
+import { IProduct } from '../../../interfaces/Product'
 
-
-
-
-
-const productSchema = Joi.object({
-  name: Joi.string().required().min(3),
-  price: Joi.number().required().min(0),
-  description: Joi.string().required().min(6),
-  image: Joi.string().optional(),
-  discount: Joi.number().min(0).optional()
-})
 const ProductAdd = () => {
   const queryClient = useQueryClient();
   const {
@@ -25,7 +12,6 @@ const ProductAdd = () => {
     handleSubmit,
     formState: { errors }
   } = useForm<IProduct>({
-    resolver: joiResolver(productSchema),
     defaultValues: {
       name: '',
       price: 0,
@@ -60,28 +46,28 @@ const ProductAdd = () => {
         <div className="my-4">
           <label htmlFor="" className='block text-[blue]'>Name</label>
           <input className='w-[95%] pl-2 h-[50px] border-[1px] border-solid border-[#ccc]' type="text" {...register('name', {required: true, minLength: 3})} />
-          {errors?.name?.message && <p className='text-[red]'>{errors?.name.message}</p>}
+          {errors?.name && <p className='text-[red]'>Tên trống !</p>}
         </div>
        
         <div className="my-4">
           <label htmlFor="" className='block text-[blue]'>Image</label>
           <input className='w-[95%] pl-2 h-[50px] border-[1px] border-solid border-[#ccc]' type="text" {...register('image', {required: true})} />
-          {errors?.image?.message && <p className='text-[red]'>{errors?.image.message}</p>}
+          {errors?.image && <p className='text-[red]'>Ảnh trống !</p>}
         </div>
         <div className="my-4">
           <label htmlFor="" className='block text-[blue]'>Price</label>
-          <input className='w-[95%] pl-2 h-[50px] border-[1px] border-solid border-[#ccc]' type="number" {...register('price', {required: true})} />
-          {errors?.price?.message && <p className='text-[red]'>{errors?.price.message}</p>}
+          <input className='w-[95%] pl-2 h-[50px] border-[1px] border-solid border-[#ccc]' type="number" {...register('price', {required: true, min: 0})} />
+          {errors?.price && <p className='text-[red]'>Giá trống !</p>}
         </div>
         <div className="my-4">
           <label htmlFor="" className='block text-[blue]'>Discount</label>
-          <input className='w-[95%] pl-2 h-[50px] border-[1px] border-solid border-[#ccc]' type="number" {...register('discount', {required: true})} />
-          {errors?.discount?.message && <p className='text-[red]'>{errors?.discount.message}</p>}
+          <input className='w-[95%] pl-2 h-[50px] border-[1px] border-solid border-[#ccc]' type="number" {...register('discount', {required: true, min:0})} />
+          {errors?.discount && <p className='text-[red]'>Discount trống !</p>}
         </div>
         <div className="my-4">
           <label htmlFor="" className='block text-[blue]'>Desc</label>
-          <input className='w-[95%] pl-2 h-[50px] border-[1px] border-solid border-[#ccc]' type="text" {...register('description', {required: true})} />
-          {errors?.description?.message && <p className='text-[red]'>{errors?.description.message}</p>}
+          <textarea className='w-[95%] pl-2  border-[1px] border-solid border-[#ccc]' rows={10} {...register('description', {required: true})} />
+          {errors?.description && <p className='text-[red]'>Mô tả trống !</p>}
         </div>
           <button type='submit' className='p-2 bg-blue-500 text-white rounded my-4 hover:opacity-80'>{isPending ? "Đang thêm" : "Thêm mới"}</button>
       </form>

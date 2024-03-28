@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Ghế Sofa màu xám",
       "price": 100000,
-      "image": "https://picsum.photos/id/10/300/300",
+      "image": "./src/assets/img/image 3.jpg",
       "description": "Ghế Sofa màu xám sang trọng và thoải mái, phù hợp cho không gian phòng khách hiện đại.",
       "discount": 30,
       "quantity": 100,
@@ -13,40 +13,40 @@
     {
       "id": 2,
       "name": "Bàn ăn tròn mặt gỗ",
-      "price": 19.99,
-      "image": "https://picsum.photos/id/11/300/300",
+      "price": "20000",
+      "image": "./src/assets/img/image 1.jpg",
       "description": "Bàn ăn tròn với mặt bàn làm từ gỗ tự nhiên, tạo điểm nhấn ấn tượng cho không gian ăn của bạn.",
-      "discount": 0.1,
+      "discount": "10",
       "quantity": 50,
       "featured": false
     },
     {
       "id": 3,
       "name": "Kệ sách treo tường",
-      "price": 5.99,
-      "image": "https://picsum.photos/id/12/300/300",
+      "price": "10000",
+      "image": "./src/assets/img/image 3.jpg",
       "description": "Kệ sách treo tường với thiết kế đơn giản nhưng hiện đại, giúp tối ưu hóa không gian lưu trữ.",
-      "discount": 0,
+      "discount": "0",
       "quantity": 200,
       "featured": true
     },
     {
       "id": 4,
       "name": "Bàn làm việc góc L",
-      "price": 14.99,
-      "image": "https://picsum.photos/id/13/300/300",
+      "price": "15000",
+      "image": "./src/assets/img/image 1.jpg",
       "description": "Bàn làm việc góc L với kiểu dáng hiện đại, giúp bạn tận dụng tối đa không gian làm việc của mình.",
-      "discount": 0.2,
+      "discount": "10",
       "quantity": 75,
       "featured": true
     },
     {
       "id": 6,
       "name": "Đèn trang trí",
-      "price": 7.99,
-      "image": "https://picsum.photos/id/15/300/300",
+      "price": "70000",
+      "image": "./src/assets/img/image 3.jpg",
       "description": "Đèn trang trí bàn làm việc với kiểu dáng hiện đại, tạo điểm nhấn cho không gian làm việc của bạn.",
-      "discount": 0.15,
+      "discount": "10",
       "quantity": 100,
       "featured": false
     },
@@ -54,39 +54,19 @@
       "id": 7,
       "name": "Bộ bàn ghế phòng ăn",
       "price": "120000",
-      "image": "https://picsum.photos/id/16/300/300",
+      "image": "./src/assets/img/image 3.jpg",
       "description": "Bộ bàn ghế phòng ăn với kiểu dáng đẹp mắt, tạo không gian ấm cúng cho bữa ăn gia đình.",
       "discount": "20",
       "quantity": 50,
       "featured": true
     },
     {
-      "id": 8,
-      "name": "Tủ TV đứng gỗ sồi",
-      "price": "70000",
-      "image": "https://picsum.photos/id/17/300/300",
-      "description": "Tủ TV đứng được làm từ gỗ sồi tự nhiên, tạo điểm nhấn cho không gian phòng khách của bạn.",
+      "name": "Ghế Sofa màu xám",
+      "price": "10000",
+      "image": "./src/assets/img/image 3.jpg",
       "discount": "10",
-      "quantity": 80,
-      "featured": true
-    },
-    {
-      "id": 9,
-      "name": "Giường ngủ đôi",
-      "price": "300000",
-      "image": "https://picsum.photos/id/18/300/300",
-      "description": "Giường ngủ đôi với kiểu dáng đẹp mắt, tạo không gian thoải mái cho giấc ngủ của bạn.",
-      "discount": "10",
-      "quantity": 120,
-      "featured": false
-    },
-    {
-      "name": "truongtuandat92",
-      "price": 100,
-      "image": "/src/assets/img/image 4.jpg",
-      "discount": 10,
-      "description": "không có",
-      "id": 15
+      "description": "Ghế sofa phòng khách",
+      "id": 8
     }
   ]
 }

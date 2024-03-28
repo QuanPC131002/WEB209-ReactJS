@@ -5,5 +5,7 @@ export interface IProduct {
     image: string
     description: string,
     discount: number,
-    featured: boolean
+    featured: boolean,
+    email: string
+    password: string,
 }

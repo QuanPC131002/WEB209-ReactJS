@@ -12,6 +12,7 @@ import Shop1 from "../assets/img/Rectangle 63.jpg";
 import Shop2 from "../assets/img/Rectangle 64.jpg";
 import Shop3 from "../assets/img/Rectangle 65.jpg";
 import Shop4 from "../assets/img/Rectangle 66.jpg";
+import Blog1 from "../assets/img/Rectangle 67 (1).jpg"
 export {
     UserIcon,
     SearchIcon,
@@ -26,6 +27,6 @@ export {
     Shop1,
     Shop2,
     Shop3,
-    Shop4
-
+    Shop4,
+    Blog1
 }

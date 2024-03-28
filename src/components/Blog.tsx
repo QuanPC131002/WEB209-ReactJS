@@ -1,4 +1,5 @@
 import React from 'react'
+import { Blog1 } from '.'
 
 const Blog = () => {
   return (
@@ -13,7 +14,7 @@ const Blog = () => {
                             <div className="post-image">
                                 <a href="#">
                                     <img
-                                        src="https://picsum.photos/id/16/665/250"
+                                        src={Blog1}
                                         alt="#"
                                         className="post__thumbnail"
                                     />
@@ -41,7 +42,7 @@ const Blog = () => {
                             <div className="post-image">
                                 <a href="#">
                                     <img
-                                        src="https://picsum.photos/id/17/665/250"
+                                        src={Blog1}
                                         alt="#"
                                         className="post__thumbnail"
                                     />
